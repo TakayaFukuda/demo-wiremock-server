@@ -5,18 +5,16 @@ plugins {
     id 'checkstyle'
 }
 
-group = 'jp.co.sample'
+group = 'jp.co.sample.demo.wiremock.server'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
-// https://github.com/checkstyle/checkstyle/releases
-// checkstyleVersion = '8.32'
-
+/*
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
     }
 }
-
+*/
 repositories {
     mavenCentral()
 }
@@ -28,8 +26,8 @@ checkstyle {
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'com.github.tomakehurst:wiremock-jre8:2.26.3'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
     annotationProcessor 'org.projectlombok:lombok'
     // test
     testImplementation('org.springframework.boot:spring-boot-starter-test') {

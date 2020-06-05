@@ -1,11 +1,15 @@
 {
   "request": {
-    "url": "/sampleapi",
+    "method": "POST",
+    "urlPattern": "/sampleapi",
     "headers": {
       "Content-Type": {
-        "equalTo": "text/plain"
+        "equalTo": "application/json"
       }
-    }
+    },
+    "bodyPatterns": [{
+      "matchesJsonPath": "$.name"
+    }]
   },
   "response": {
     "status": 200,
