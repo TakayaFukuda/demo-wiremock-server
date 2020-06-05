@@ -16,7 +16,7 @@ public class WireMockServersFactory {
     public WireMockServer wireMockServer() {
         return new WireMockServer(
                 WireMockConfiguration.options()
-                        .dynamicPort()
+                        .port(WireMockConfiguration.DEFAULT_PORT)
         );
     }
 }
