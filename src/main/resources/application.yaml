@@ -1,0 +1,2 @@
+wiremock:
+  is-local: ${WIREMOCK_IS_LOCAL}
